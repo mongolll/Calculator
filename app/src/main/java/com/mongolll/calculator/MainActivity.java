@@ -30,4 +30,56 @@ public class MainActivity extends AppCompatActivity {
             return "";
         }
     }
+
+    public void onButtonClick2(View v) {
+        EditText el1 = findViewById(R.id.num1);
+        EditText el2 = findViewById(R.id.num2);
+        TextView resText = findViewById(R.id.Result);
+        resText.setText(getParsedMin(el1, el2));
+    }
+
+    private String getParsedMin(EditText et1, EditText et2) {
+        try {
+            int num1 = Integer.parseInt(et1.getText().toString());
+            int num2 = Integer.parseInt(et2.getText().toString());
+            return Integer.toString(num1 - num2);
+        } catch (Throwable e) {
+            return "";
+        }
+    }
+
+    public void onButtonClick3(View v) {
+        EditText el1 = findViewById(R.id.num1);
+        EditText el2 = findViewById(R.id.num2);
+        TextView resText = findViewById(R.id.Result);
+        resText.setText(getParsedUmn(el1, el2));
+    }
+
+
+    private String getParsedUmn(EditText et1, EditText et2) {
+        try {
+            int num1 = Integer.parseInt(et1.getText().toString());
+            int num2 = Integer.parseInt(et2.getText().toString());
+            return Integer.toString(num1 * num2);
+        } catch (Throwable e) {
+            return "";
+        }
+    }
+
+    public void onButtonClick4(View v) {
+        EditText el1 = findViewById(R.id.num1);
+        EditText el2 = findViewById(R.id.num2);
+        TextView resText = findViewById(R.id.Result);
+        resText.setText(getParsedDel(el1, el2));
+    }
+
+    private String getParsedDel(EditText et1, EditText et2) {
+        try {
+            int num1 = Integer.parseInt(et1.getText().toString());
+            int num2 = Integer.parseInt(et2.getText().toString());
+            return Integer.toString(num1 / num2);
+        } catch (Throwable e) {
+            return "";
+        }
+    }
 }

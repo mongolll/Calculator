@@ -43,20 +43,45 @@
 
     <Button
         android:id="@+id/sum"
-        android:layout_width="43dp"
+        android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:onClick="onButtonClick"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
     <Button
         android:id="@+id/min"
-        android:layout_width="43dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:onClick="onButtonClick2"
         android:text="-"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="231dp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/sum"
+        app:layout_constraintTop_toBottomOf="@+id/sum" />
+
+    <Button
+        android:id="@+id/umn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:onClick="onButtonClick3"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="@+id/min"
+        app:layout_constraintTop_toBottomOf="@+id/min" />
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:onClick="onButtonClick4"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@+id/umn"
+        app:layout_constraintTop_toBottomOf="@+id/umn" />
+
 </android.support.constraint.ConstraintLayout>
